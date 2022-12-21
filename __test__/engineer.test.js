@@ -1,5 +1,7 @@
-const Employee = require("../lib/employee")
+// Import the Engineer class.
+const Engineer = require("../lib/Engineer")
 
+// Test the Engineer class.
 test("Test Engineer object created from class",() =>{
     const testEngineer = new Engineer("John Doe", 99999, "johndoe@company.com", "www.github.com/engineer")
     expect(typeof(testEngineer)).toBe("object")

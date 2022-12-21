@@ -1,6 +1,52 @@
-
+// Import employee class.
 const Employee = require("../lib/employee")
 
+// Test the Employee class.
+describe("Employee", () => {
+    it("should create and object with a name, ID, and email address if provided valid arguements", () => {
+        const testEmployee = new Employee("John Doe",99999,"johndoe@company.com")
+        expect(typeof(testEmployee)).toBe("object")
+        expect(testEmployee.name).toBe("John Doe")
+        expect(testEmployee.id).toBe(99999)  
+        expect(testEmployee.email).toBe("johndoe@company.com")
+        expect(testEmployee.getName()).toBe("John Doe")
+        expect(testEmployee.getEmail()).toBe("johndoe@company.com")
+        expect(testEmployee.getId()).toBe(99999)
+        expect(testEmployee.getRole()).toBe("Employee")
+       })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// LEAVING WHAT'S BELOW FOR MY REFERENCE
 
 // test("Test Employee object created from class",() =>{
 //     const testEmployee = new Employee("John Doe",99999,"johndoe@company.com")
@@ -37,16 +83,3 @@ const Employee = require("../lib/employee")
 // //         expect(child.age).toEqual(3);
 // //       })
     
-describe("Employee", () => {
-    it("should create and object with a name, ID, and email address if provided valed arguements", () => {
-        const testEmployee = new Employee("John Doe",99999,"johndoe@company.com")
-        expect(typeof(testEmployee)).toBe("object")
-        expect(testEmployee.name).toBe("John Doe")
-        expect(testEmployee.id).toBe(99999)  
-        expect(testEmployee.email).toBe("johndoe@company.com")
-        expect(testEmployee.getName()).toBe("John Doe")
-        expect(testEmployee.getEmail()).toBe("johndoe@company.com")
-        expect(testEmployee.getId()).toBe(99999)
-        expect(testEmployee.getRole()).toBe("Employee")
-       })
-})
